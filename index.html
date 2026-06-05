@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SRT Caption Cleaner</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Local subtitle cleanup</p>
+          <h1>SRT Caption Cleaner</h1>
+        </div>
+        <div class="status" id="privacyStatus">Local-only MVP</div>
+      </header>
+
+      <section class="controls" aria-label="Cleaner controls">
+        <label>
+          Max chars per line
+          <input id="maxChars" type="number" min="16" max="80" value="42">
+        </label>
+        <label>
+          Min cue duration ms
+          <input id="minDuration" type="number" min="100" max="3000" value="800">
+        </label>
+        <label>
+          Max cue duration ms
+          <input id="maxDuration" type="number" min="1000" max="12000" value="7000">
+        </label>
+        <label>
+          Input file
+          <input id="fileInput" type="file" accept=".srt,.vtt,text/plain">
+        </label>
+      </section>
+
+      <section class="workspace">
+        <div class="pane">
+          <div class="paneHeader">
+            <h2>Input</h2>
+            <button id="loadSample" type="button">Load sample</button>
+          </div>
+          <textarea id="inputText" spellcheck="false" placeholder="Paste SRT or VTT captions here..."></textarea>
+        </div>
+
+        <div class="pane">
+          <div class="paneHeader">
+            <h2>Cleaned SRT</h2>
+            <button id="copyOutput" type="button">Copy</button>
+          </div>
+          <textarea id="outputText" spellcheck="false" readonly></textarea>
+        </div>
+      </section>
+
+      <section class="actions" aria-label="Actions">
+        <button id="cleanButton" type="button">Clean captions</button>
+        <button id="downloadSrt" type="button">Download SRT</button>
+        <button id="downloadReport" type="button">Download report</button>
+      </section>
+
+      <section class="report" aria-live="polite">
+        <h2>Quality report</h2>
+        <div class="metrics" id="metrics"></div>
+        <ul id="issues"></ul>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
