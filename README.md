@@ -19,13 +19,16 @@ The tool is a static browser page. Captions are processed locally in the browser
 
 Open `index.html` in a browser, paste captions, or load the built-in sample.
 
-## Paid pilot
+## RMB paid pilot
 
 The free tool is also a lead-in for a small caption QA service:
 
-- $9 pilot review for SRT/VTT captions under 15 minutes.
+- 19 RMB pilot review for SRT/VTT captions under 15 minutes.
+- Overseas quotes can be converted from USD, but the current payment rails are WeChat Pay or Alipay.
 - Output: cleaned caption file plus a short quality report.
-- Request a quote through the GitHub issue template.
+- Payment method: WeChat Pay or Alipay after the scope is confirmed; this page does not collect files or payments.
+- Contact: WeChat `stinkRico114514`, or open a GitHub Issue with the caption scope first.
+- Request a quote through the GitHub issue template or the platform where the post is shared.
 
 ## Scope
 
