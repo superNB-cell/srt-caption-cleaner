@@ -77,6 +77,7 @@ h2 {
 .controls,
 .actions,
 .report,
+.offer,
 .pane {
   border: 1px solid var(--line);
   background: var(--panel);
@@ -185,6 +186,40 @@ button:hover {
   padding: 14px;
 }
 
+.offer {
+  margin-top: 14px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.offer p {
+  max-width: 720px;
+  margin: 8px 0 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.offerButton {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 12px;
+  font-weight: 750;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.offerButton:hover {
+  background: var(--accent-dark);
+}
+
 .metrics {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -216,6 +251,7 @@ button:hover {
 
 @media (max-width: 820px) {
   .topbar,
+  .offer,
   .actions {
     align-items: stretch;
     flex-direction: column;
@@ -231,4 +267,3 @@ button:hover {
     font-size: 26px;
   }
 }
-
